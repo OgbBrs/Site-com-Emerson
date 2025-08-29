@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Comic Relief', system-ui;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(235, 191, 111);
+    color:white
+}
+header{
+    margin-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: rgb(201, 158, 79);
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform:scale(1.1)
+}
+nav a{
+    font-size: 1.8rem;
+    color:rgb(241, 241, 241);
+    margin-left: 4rem;
+    font-weight: 400;
+    transition: 0.3s ease;
+    border-bottom: 3px solid;
+}
+nav a:hover,
+nav a.active{
+    color: aliceblue;
+    border-bottom: 3px solid rgb(201, 158, 79);
+}
+ 
+section{
+min-height: 100vh;
+padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(231, 187, 104);
+}
+ 
+.home .home-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: rgb(201, 158, 79);
+}
+.home-content h3{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.5rem;
+}
+.home-img img{
+    position: relative;
+    width: 40vh;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+ 
+.home-img img:hover{
+    transform: scale(1.1) ;
+}
+.home .social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: transparent;
+    color: bisque;
+    border: 0.2rem solid ;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    width: 4rem;
+    height: 4rem;
+    transition: 0.3s ease;
+}
+ .social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: bisque;
+    box-shadow: 0 0 25px bisque;
+ }
+ .btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: bisque;
+    border: 0.2rem solid bisque;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;  
+ }
+ .btn:hover{
+    transform: scale(1.1);
+    background-color: bisque;
+    box-shadow: 0 0 25px bisque;
+ }
+ .typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+ }
+ .typing-text span{
+    position: relative;
+ }
+ .typing-text span::before{
+    content: "a";
+    color: bisque;
+    animation: words 20s infinite;
+ }
+ .typing-text span::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: calc(100%+8px);
+    height: 100%;
+    border-left: 3px solid rgb(231, 187, 104)e;
+    animation: cursor 0.6s infinite;
+ }
+ @keyframes cursor{
+    to{
+        border-left: 3px solid bisque;
+    }
+ }
+ @keyframes words{
+    0%, 20%{
+        content: "Entegador do Ifood";
+    }
+    21%, 40%{
+        content: "Farmer Do Roblox";
+    }
+    41%, 60%{
+        content: "Leitor de Manga";
+    }
+    61%, 80%{
+        content: "Caçador HxH";
+    }
+    81%, 100%{
+        content: "Tec em Info";
+    }
+ }
+ @media(max-width: 995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        border-left: 3px solid beige;
+        border-bottom: 3px solid beige;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: blanchedalmond;
+        border-top: 0.1rem solid rgb(231, 187, 104);
+    
+
+ }
+ nav.active{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-bottom: 0.5rem solid #c995e9;
+    }
+}
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 4rem;
+    }
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+ }
+ .menu-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+ }
+ .menu-icon span{
+    display: block;
+    height: 4px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 2px;
+ }
+ @media(max-width: 995px){
+    .menu-icon{
+        display: flex;
+    }
+    #menu-toggle:checked ~ nav{
+        display: block;
+    }
+ }
