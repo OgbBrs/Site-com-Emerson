@@ -10,6 +10,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-padding: 80px;
 }
 body{
     width: 100%;
@@ -189,10 +190,15 @@ span{
     
 
  }
- nav.active{
+nav.active{
+        display: block;
+    }
+ 
+    nav a{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
     }
     nav a:hover,
     nav a.active{
@@ -229,17 +235,39 @@ span{
     cursor: pointer;
     z-index: 101;
  }
- .menu-icon span{
+.menu-icon{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+.menu-icon span{
     display: block;
     height: 4px;
-    background-color:rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
     border-radius: 2px;
- }
- @media(max-width: 995px){
+}
+@media (max-width: 995px){
     .menu-icon{
         display: flex;
     }
     #menu-toggle:checked ~ nav{
         display: block;
     }
- }
+}
+.blocos h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid bisque;
+    padding-left: 1.5rem;
+    color: beige;
+}
+.blocos p{
+    font-size: 1.65rem;
+    line-height: 1.7;
+    color: white;
+}
+ 
